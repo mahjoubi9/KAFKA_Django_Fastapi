@@ -1,0 +1,8 @@
+[2022-11-10 05:01:43,353] INFO [Controller id=1 epoch=5] Sending UpdateMetadata request to brokers Set(0, 1) for 0 partitions (state.change.logger)
+[2022-11-10 05:01:43,402] INFO [Controller id=1 epoch=5] Sending LeaderAndIsr request to broker 1 with 1 become-leader and 0 become-follower partitions (state.change.logger)
+[2022-11-10 05:01:43,421] INFO [Controller id=1 epoch=5] Sending LeaderAndIsr request to broker 0 with 56 become-leader and 0 become-follower partitions (state.change.logger)
+[2022-11-10 05:01:43,425] INFO [Controller id=1 epoch=5] Sending UpdateMetadata request to brokers Set(0, 1) for 57 partitions (state.change.logger)
+[2022-11-10 05:01:43,468] INFO [Broker id=1] Handling LeaderAndIsr request correlationId 1 from controller 1 for 1 partitions (state.change.logger)
+[2022-11-10 05:01:43,530] INFO [Broker id=1] Ignoring LeaderAndIsr request from controller 1 with correlation id 1 epoch 5 for partition djangofastapi-0 since its associated leader epoch 0 matches the current leader epoch (state.change.logger)
+[2022-11-10 05:01:43,531] INFO [Broker id=1] Finished LeaderAndIsr request in 63ms correlationId 1 from controller 1 for 1 partitions (state.change.logger)
+[2022-11-10 05:01:43,536] INFO [Broker id=1] Add 57 partitions and deleted 0 partitions from metadata cache in response to UpdateMetadata request sent by controller 1 epoch 5 with correlation id 2 (state.change.logger)

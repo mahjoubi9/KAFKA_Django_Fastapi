@@ -1,0 +1,35 @@
+./bin/zookeeper-server-start.sh ./config/zookeeper.properties
+./bin/kafka-server-start.sh ./config/server.properties
+./bin/kafka-topics.sh --create --topic blabla --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4
+./bin/kafka-topics.sh --describe --bootstrap-server localhost:9092
+
+
+mahjoubi@mahjoubi-ThinkPad-X260:~/Documents/kafka/kafka_2.12-3.3.1$ ./bin/zookeeper-server-start.sh ./config/zookeeper.properties
+mahjoubi@mahjoubi-ThinkPad-X260:~/Documents/kafka/kafka_2.12-3.3.1$ ./bin/kafka-server-start.sh ./config/server.properties
+mahjoubi@mahjoubi-ThinkPad-X260:~/Documents/kafka/kafka_2.12-3.3.1$ ./bin/kafka-server-start.sh ./config/server1.properties
+
+producer = KafkaProducer(bootstrap_servers=['localhost:9092', 'localhost:9093'])
+consumer = KafkaConsumer(..., bootstrap_servers=['localhost:9092', 'localhost:9093'], ...)
+
+
+//cree server
+ cp config/server.properties config/server1.properties
+
+d5c3fb4036213e83c0a60fd2325abad61910f268
+
+run kafka manager
+cd kafka-manager/
+  ./sbt clean dist
+
+
+
+ ./test.py -p “a” “b”
+ jupyter-notebook
+ 
+ 
+ python3 ./prod.py
+ python3 ./consumertraitement.py
+ 
+ 
+ 
+ python3 manage.py runserver
