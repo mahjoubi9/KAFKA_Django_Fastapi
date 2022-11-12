@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mon site web </title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'boot/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'boot/css/bootstrap.css' %}"> {% endcomment %}
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">diabetes</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+    <p></p>
+    <div class="container" >
+      <h4 class="hhhh" style="background-color:DodgerBlue;">bonjour, la prediction  de la dernier test : {{resultat}}</h4>
+        <form method="POST" class="post-form" action="/home">
+          {% csrf_token %}  
+          <div class="mb-3">
+            <label  class="form-label">Pregnancies</label>
+            <input type="text" name="Pregnancies" class="form-control">
+          </div> 
+          <div class="mb-3">
+            <label  class="form-label">Glucose</label>
+            <input type="text" name="Glucose" class="form-control">
+          </div> 
+          <div class="mb-3">
+            <label  class="form-label">BloodPressure</label>
+            <input type="text" name="BloodPressure" class="form-control">
+          </div> 
+          <div class="mb-3">
+            <label  class="form-label">SkinThickness</label>
+            <input type="text" name="SkinThickness" class="form-control">
+          </div> 
+          <div class="mb-3">
+            <label  class="form-label">Insulin</label>
+            <input type="text" name="Insulin" class="form-control">
+          </div> 
+          <div class="mb-3">
+            <label  class="form-label">BMI</label>
+            <input type="text" name="BMI" class="form-control">
+          </div> 
+          <div class="mb-3">
+            <label  class="form-label">DiabetesPedigreeFunction</label>
+            <input type="text" name="DiabetesPedigreeFunction" class="form-control">
+          </div> 
+          <div class="mb-3">
+            <label  class="form-label">Age</label>
+            <input type="text" name="Age" class="form-control">
+          </div> 
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>    
+</body>
+
+<html>
